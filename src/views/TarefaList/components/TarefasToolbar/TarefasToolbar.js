@@ -13,7 +13,13 @@ const TarefasToolbar = props => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(descricao, categoria)
+    const tarefa = {
+      descricao,
+      categoria
+    }
+    props.salvar(tarefa);
+    setCategoria('');
+    setDescricao('');
   }
 
   const classes = useStyles();
